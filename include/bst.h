@@ -21,7 +21,7 @@ class BST {
     int c = 0;
     vetka* levo = nullptr;
     vetka* pravo = nullptr;;
-    };
+  };
     vetka* kor;
     vetka* plusvetka(vetka* kor, const T& znc) {
     if (kor == nullptr) {
