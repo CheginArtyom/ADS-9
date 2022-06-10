@@ -5,24 +5,24 @@ template<typename T>
 class BST {
   public:
    BST() :kor(nullptr) {}
-  void Plus(const T& znc) {
+    void Plus(const T& znc) {
     kor = plusvetka(kor, znc);
-  }
-  int poisk(const T& znc) {
+    }
+    int poisk(const T& znc) {
     return poiskvetka(kor, znc);
   }
   int d() {
     return dp(kor) - 1;
   }
- private:
-  struct vetka {
-  T zn;
-  int c = 0;
-  vetka* levo = nullptr;
-  vetka* pravo = nullptr;;
-  };
-  vetka* kor;
-  vetka* plusvetka(vetka* kor, const T& znc) {
+  private:
+    struct vetka {
+    T zn;
+    int c = 0;
+    vetka* levo = nullptr;
+    vetka* pravo = nullptr;;
+    };
+    vetka* kor;
+    vetka* plusvetka(vetka* kor, const T& znc) {
     if (kor == nullptr) {
       kor = new vetka;
       kor->zn = znc;
