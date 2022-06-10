@@ -3,8 +3,8 @@
 #define INCLUDE_BST_H_
 template<typename T>
 class BST {
-  public:
-   BST() :kor(nullptr) {}
+ public:
+  BST() :kor(nullptr) {}
     void Plus(const T& znc) {
     kor = plusvetka(kor, znc);
     }
@@ -14,6 +14,7 @@ class BST {
   int d() {
     return dp(kor) - 1;
   }
+  
   private:
     struct vetka {
     T zn;
