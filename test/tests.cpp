@@ -8,24 +8,24 @@ BST<std::string> makeTree(const char* filename);
 TEST(lab9, test1_1) {
     const char* filename = "/home/runner/work/ADS-9/ADS-9/build/test/war_peace.txt";
     BST<std::string> tree = makeTree(filename);
-    int depth = tree.depth();
-    EXPECT_EQ(depth, 35);
+    int d = tree.d();
+    EXPECT_EQ(d, 35);
 }
 TEST(lab9, test1_2) {
     const char* filename = "/home/runner/work/ADS-9/ADS-9/build/test/war_peace.txt";
     BST<std::string> tree = makeTree(filename);
-    int depth = tree.search("pierre");
-    EXPECT_EQ(depth, 1963);
+    int d = tree.poisk("pierre");
+    EXPECT_EQ(d, 1963);
 }
 TEST(lab9, test1_3) {
     const char* filename = "/home/runner/work/ADS-9/ADS-9/build/test/war_peace.txt";
     BST<std::string> tree = makeTree(filename);
-    int depth = tree.search("natasha");
-    EXPECT_EQ(depth, 1212);
+    int d = tree.poisk("natasha");
+    EXPECT_EQ(d, 1212);
 }
 TEST(lab9, test1_4) {
     const char* filename = "/home/runner/work/ADS-9/ADS-9/build/test/war_peace.txt";
     BST<std::string> tree = makeTree(filename);
-    int depth = tree.search("andrew");
-    EXPECT_EQ(depth, 1143);
+    int d = tree.poisk("andrew");
+    EXPECT_EQ(d, 1143);
 }
