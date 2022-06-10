@@ -14,8 +14,8 @@ class BST {
   int d() {
     return dp(kor) - 1;
   }
- 
-private:
+
+ private:
   struct vetka {
     T zn;
     int c = 0;
