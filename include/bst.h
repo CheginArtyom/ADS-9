@@ -14,22 +14,22 @@ class BST {
   int d() {
     return dp(kor) - 1;
   }
-  
-  private:
-    struct vetka {
-    T zn;
-    int c = 0;
-    vetka* levo = nullptr;
-    vetka* pravo = nullptr;;
-    };
-    vetka* kor;
-    vetka* plusvetka(vetka* kor, const T& znc) {
-    if (kor == nullptr) {
-      kor = new vetka;
-      kor->zn = znc;
-      kor->c = 1;
-      kor->levo = kor->pravo = nullptr;
-    } else if (kor->zn < znc) {
+ 
+ private:
+   struct vetka {
+     T zn;
+     int c = 0;
+     vetka* levo = nullptr;
+     vetka* pravo = nullptr;;
+     };
+     vetka* kor;
+     vetka* plusvetka(vetka* kor, const T& znc) {
+     if (kor == nullptr) {
+       kor = new vetka;
+       kor->zn = znc;
+       kor->c = 1;
+       kor->levo = kor->pravo = nullptr;
+   } else if (kor->zn < znc) {
         kor->levo = plusvetka(kor->levo, znc);
       } else if (kor->zn > znc) {
           kor->pravo = plusvetka(kor->pravo, znc);
