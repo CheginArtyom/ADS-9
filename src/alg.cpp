@@ -21,7 +21,7 @@ BST<std::string> makevetki(const char* filename) {
       if ((t >= 'a') && (t <= 'z')) {
         slovo += t;
       } else {
-        vetki.Add(slovo);
+        vetki.Plus(slovo);
         slovo = "";
       }
     }
