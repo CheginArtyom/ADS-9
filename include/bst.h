@@ -4,7 +4,7 @@
 template<typename T>
 class BST {
   public:
-  BST() :kor(nullptr) {}
+   BST() :kor(nullptr) {}
   void Plus(const T& znc) {
     kor = plusvetka(kor, znc);
   }
@@ -14,7 +14,6 @@ class BST {
   int d() {
     return dp(kor) - 1;
   }
-  
  private:
   struct vetka {
   T zn;
